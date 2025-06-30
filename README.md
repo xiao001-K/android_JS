@@ -13,6 +13,15 @@ const maxY = 800;
 var x = Math.floor(Math.random() * (maxX - minX + 1)) + minX;  
 var y = Math.floor(Math.random() * (maxY - minY + 1)) + minY;  
 doubleClick(x,y);
+//设置剪切板内容并打印
+clip('剪贴板文本');
+let clipboardText = getClip();
+if (clipboardText) {
+    print("剪贴板内容: " + clipboardText);
+} else {
+    print("剪贴板为空或无法获取内容");
+}
+
 //打开悬浮窗
 showLog() 
 print('返回桌面') //打印日志
