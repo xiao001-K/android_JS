@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE LinearLayout [
+<!ELEMENT LinearLayout (TextView|LinearLayout|EditText|CheckBox|Button)*>
+<!ATTLIST LinearLayout
+  android:layout_height CDATA #REQUIRED
+  android:layout_marginBottom CDATA #IMPLIED
+  android:layout_width CDATA #REQUIRED
+  android:orientation CDATA #REQUIRED
+  android:padding CDATA #IMPLIED
+  xmlns:android CDATA #IMPLIED
+  xmlns:tools CDATA #IMPLIED>
+
+<!ELEMENT TextView (#PCDATA)>
+<!ATTLIST TextView
+  android:id CDATA #IMPLIED
+  android:layout_gravity CDATA #REQUIRED
+  android:layout_height CDATA #REQUIRED
+  android:layout_marginBottom CDATA #IMPLIED
+  android:layout_marginEnd CDATA #IMPLIED
+  android:layout_marginStart CDATA #IMPLIED
+  android:layout_width CDATA #REQUIRED
+  android:text CDATA #REQUIRED
+  android:textSize CDATA #REQUIRED
+  android:textStyle CDATA #IMPLIED>
+
+<!ELEMENT EditText (#PCDATA)>
+<!ATTLIST EditText
+  android:gravity CDATA #REQUIRED
+  android:hint CDATA #REQUIRED
+  android:id CDATA #REQUIRED
+  android:inputType CDATA #REQUIRED
+  android:layout_height CDATA #REQUIRED
+  android:layout_weight CDATA #REQUIRED
+  android:layout_width CDATA #REQUIRED
+  android:text CDATA #REQUIRED
+  android:textSize CDATA #REQUIRED>
+
+<!ELEMENT CheckBox (#PCDATA)>
+<!ATTLIST CheckBox
+  android:id CDATA #REQUIRED
+  android:layout_gravity CDATA #REQUIRED
+  android:layout_height CDATA #REQUIRED
+  android:layout_width CDATA #REQUIRED
+  android:text CDATA #REQUIRED
+  android:textSize CDATA #REQUIRED>
+
+<!ELEMENT Button (#PCDATA)>
+<!ATTLIST Button
+  android:backgroundTint CDATA #REQUIRED
+  android:id CDATA #REQUIRED
+  android:layout_gravity CDATA #IMPLIED
+  android:layout_height CDATA #REQUIRED
+  android:layout_marginStart CDATA #IMPLIED
+  android:layout_marginTop CDATA #IMPLIED
+  android:layout_width CDATA #REQUIRED
+  android:text CDATA #REQUIRED
+  android:textColor CDATA #REQUIRED
+  android:textSize CDATA #REQUIRED>
+]>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="参数设置"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="执行收藏数量(个):"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/run_num_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint=""
+            android:text="1999"
+            android:inputType="number"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主页停留时间(秒):"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/index_0_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint=""
+            android:text="6"
+            android:inputType="number"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="至"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/index_1_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint=""
+            android:text="18"
+            android:inputType="number"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="视频停留时间(秒):"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/view_0_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint=""
+            android:text="12"
+            android:inputType="number"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="至"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/view_1_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint=""
+            android:text="20"
+            android:inputType="number"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏间隔时间(秒):"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/jump_0_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint=""
+            android:text="36"
+            android:inputType="number"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="至"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/jump_1_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint=""
+            android:text="60"
+            android:inputType="number"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每收藏"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/num_0_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint=""
+            android:text="300"
+            android:inputType="number"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个，休息(秒):"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/tosleep_0_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint=""
+            android:text="500"
+            android:inputType="number"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="至"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/tosleep_1_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint=""
+            android:text="600"
+            android:inputType="number"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择用户性别："
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"/>
+
+        <CheckBox
+            android:id="@+id/gender_m_in"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="男"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/gender_w_in"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="女"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/gender_no_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未知"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/uid_file_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="uid文件：未选择"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/uid_file_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择文件"
+        android:textSize="16sp"
+        android:layout_gravity="center_vertical"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="8dp"/>
+
+    <Button
+        android:id="@+id/start_run_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始执行"
+        android:textSize="18sp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>

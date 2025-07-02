@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        maven { url=uri("https://maven.aliyun.com/repository/google") }
+        maven { url=uri("https://maven.aliyun.com/repository/public") }
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url=uri("https://maven.aliyun.com/repository/google") }
+        maven { url=uri("https://maven.aliyun.com/repository/public") }
+
+        google()
+        mavenCentral()
+        // JitPack 远程仓库 https://jitpack.io
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://developer.huawei.com/repo' }
+        maven { url 'https://developer.hihonor.com/repo' }
+    }
+}
+rootProject.name = "FATJS"
+include ':app'
+include ':library'
